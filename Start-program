@@ -1,0 +1,11 @@
+start-process -filepath "C:\Program Files (x86)\Google\Chrome\Application\Chrome.exe" -ArgumentList "https://www.netflix.com/browse"
+start-process -filepath "D:\Programs\Steam\Steam.exe"
+start-process -filepath "D:\Programs\Battle.net\Battle.net.exe"
+
+function open-link{
+param( $link)
+start-process -filepath "C:\Program Files (x86)\Google\Chrome\Application\Chrome.exe" -ArgumentList $link
+write-host "$link Open!"
+}
+
+open-link -link 'https://www.netflix.com/browse'
